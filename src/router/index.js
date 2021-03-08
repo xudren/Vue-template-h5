@@ -18,8 +18,8 @@ const router = new Router({
     {
       path: "/",
       name: "home",
-      component: () => import(/* webpackChunkName: "index" */ "@/views/Home"),
-      meta: { title: "首页" }
+      component: () => import(/* webpackChunkName: "index" */ "@/views/Home")
+      // meta: { title: "首页" }
     },
     ...routes
   ]

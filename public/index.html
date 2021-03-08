@@ -5,13 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <title>临港新片区工地管理</title>
+    <style>
+      #app{
+        width: 100%;
+        height: 100%;
+      }
+      .skeleton {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
+        padding: 15px;
+        box-sizing: border-box;
+        background: #fff;
+        width: 98%;
+        top: 0;
+      }
+      .skeleton-nav {
+        height: 46px;
+        background: #eee;
+        margin-bottom: 15px;
+      }
+      .skeleton-swiper {
+        height: 56px;
+        background: #eee;
+        margin-bottom: 15px;
+      }
+      .skeleton-tabs {
+        list-style: none;
+        padding: 0;
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skeleton-tabs-item {
+        width: 25%;
+        height: 32px;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .skeleton-tabs-item span {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 55px;
+        background: #eee;
+      }
+      .skeleton-banner {
+        height: 26px;
+        background: #eee;
+        margin-bottom: 15px;
+      }
+      .skeleton-productions {
+        height: 26px;
+        margin-bottom: 15px;
+        background: #eee;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <!--骨架屏-->
+      1<div data-server-rendered=true class="skeleton page">
+           <div class=skeleton-nav></div>
+           <div class=skeleton-swiper></div>
+           <ul class=skeleton-tabs>
+             <li class=skeleton-tabs-item><span></span></li>
+             <li class=skeleton-tabs-item><span></span></li>
+             <li class=skeleton-tabs-item><span></span></li>
+             <li class=skeleton-tabs-item><span></span></li>
+             <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+            </ul>
+            <div class=skeleton-banner></div>
+            <div class=skeleton-productions></div>
+            <div class=skeleton-productions></div>
+            <div class=skeleton-productions></div>
+            <div class=skeleton-productions></div>
+            <ul class=skeleton-tabs>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+              <li class=skeleton-tabs-item><span></span></li>
+            </ul>
+            <div class=skeleton-swiper></div>
+            <div class=skeleton-nav></div>
+          </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
