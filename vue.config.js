@@ -4,7 +4,7 @@ const resolve = dir => {
 };
 const prodEnv = process.env.NODE_ENV === "production";
 const BASE_URL = prodEnv ? "./" : "/";
-module.export = {
+module.exports = {
   publicPath: BASE_URL,
   lintOnSave: true,
   // webpack相关
