@@ -77,8 +77,9 @@ export default {
       console.log(this.video, "style");
       let duration = this.video.duration;
       let i = 0;
+      let VirtualDom = document.createDocumentFragment();
       let interval = setInterval(() => {
-        // this.video.currentTime = i;
+        this.video.currentTime = i;
         let canvasDom = document.createElement("canvas"); //canvas dom
         let canvasContext = canvasDom.getContext("2d");
         if (this.VideoSrc) {
@@ -95,14 +96,18 @@ export default {
           imgDom.src = dataUrl;
           imgDom.width = 400;
           imgDom.height = 400;
-          this.parentNode.appendChild(imgDom);
           i += 10;
-          console.log(i, duration, "11111");
-          if (i > duration) clearInterval(interval);
+          VirtualDom.appendChild(imgDom);
+          console.log(i, duration, dataUrl, "11111");
+          if (i > duration) {
+            this.parentNode.appendChild(VirtualDom);
+            this.video.currentTime = 0;
+            clearInterval(interval);
+          }
 
           // video.onloadeddata = ;
         }
-      });
+      }, 100);
       console.log(444444444444);
       // if (this.VideoSrc) {
       //   console.dir(this.video, "this.video");
