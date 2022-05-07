@@ -1,8 +1,9 @@
 import Vue from "vue";
-import Router from "vue-router";
-
+// import Router from "vue-router";
+import Router from "../myRouter/index";
+// console.log(Router,'Router')
 Vue.use(Router);
-
+console.log(Router, "Router1");
 let routes = [];
 const routerContext = require.context("./", true, /index\.js$/);
 routerContext.keys().forEach(route => {
@@ -25,12 +26,12 @@ const router = new Router({
   ]
 });
 
-router.beforeEach((to, froms, next) => {
-  if (to.meta.title) {
-    document.title = to.meta.title;
-  }
+// router.beforeEach((to, froms, next) => {
+//   if (to.meta.title) {
+//     document.title = to.meta.title;
+//   }
 
-  next();
-});
+//   next();
+// });
 
 export default router;

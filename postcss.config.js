@@ -23,3 +23,4 @@ module.exports = {
     }
   }
 };
+// 蓝湖上设计稿自定义为375px 测量值直接写入即可 若设计稿为750px 则rootValue: 32
